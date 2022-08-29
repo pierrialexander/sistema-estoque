@@ -1,0 +1,28 @@
+// TABELA DE USUARIOS
+
+CREATE TABLE `users` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`user_number` INT(11) NOT NULL,
+	`user_pass` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`user_token` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;
+
+
+// TABELA DE PRODUTOS
+
+CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`cod` INT(30) NULL DEFAULT NULL,
+	`name` VARCHAR(100) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`price` FLOAT NOT NULL,
+	`quantity` FLOAT NOT NULL,
+	`min_quantity` FLOAT NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;
